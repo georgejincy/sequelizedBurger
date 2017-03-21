@@ -1,19 +1,29 @@
 {
-  "name": "burger-app",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "A burger logger that uses MySQL, Node, Express and Handlebars",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM , also uses the MVC pattern",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "author": "Jincy George",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.7",
-    "mysql": "^2.13.0"
-  }
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgejincy/sequelizedBurger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgejincy/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/georgejincy/sequelizedBurger#readme"
 }

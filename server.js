@@ -1,11 +1,13 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
+var db = require("./models");
 
 var port = process.env.PORT || 3000;
 
 var app = express();
 
+db.
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(process.cwd() + "/public"));
 
@@ -27,8 +29,9 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-// Starts the server to begin listening
-// =============================================================
-app.listen(port, function() {
-  console.log("App listening on PORT " + port);
+// Syncing our sequelize models and then starting our express app
+db.sequelize.sync({ force: true }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
